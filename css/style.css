@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+:root
+{
+    --soft-blue_1:hsl(215, 51%, 70%);
+    --soft-blue_2:hsl(178, 100%, 50%);
+    --very-dark-blue-main_bg:hsl(217, 54%, 11%);
+    --very-dark-blue_card_bg:hsl(216, 50%, 16%);
+    --very-dark-blue_3:hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+body
+{
+background-color:var(--very-dark-blue-main_bg);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+font-size: 18px;
+}
+.main
+{
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 620px;
+    background-color: var(--very-dark-blue_card_bg);
+    width: 350px;
+    border-radius:10px;
+}
+.NFT-img
+{
+    position: relative;
+    margin: 20px 10px;
+    display: inline-block; 
+
+}
+.NFT-img img
+{
+    border-radius: 10px;
+    margin: auto 15px;
+    height: auto;
+    display: block; 
+    transition: opacity 0.3s ease; 
+}
+.Equilibrium-id p
+{
+    color: var(--white);
+    margin-left: 24px;
+    font-family: "Outfit", serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.Equilibrium-id p:nth-child(2)
+{
+   color: var(--soft-blue_1);
+   font-weight: 300;
+   font-size: 18px;
+}
+.icons
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+}
+
+.icons img {
+    margin-right: 5px; 
+}
+    
+.icons .Eth-icon
+{
+    font-size: 16px;
+    color: var(--soft-blue_2);
+    font-weight: bold;
+    display: flex;
+}
+.icons .clock-icon
+{
+    margin-right: 10px;
+    font-size: 16px;
+    color: var(--soft-blue_1);
+    display: flex;
+}
+
+hr
+{
+    width: 302px;
+    opacity: 50%;
+    color: var(--very-dark-blue_);
+}
+p {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image-container img:first-child {
+    position: relative; 
+  }
+
+  .image-container img:last-child {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 33px;
+    height: 33px;
+  }
+p span:nth-child(2)
+{
+    color: var(--soft-blue_1);
+    font-size: 16px;
+    font-family: "Outfit", serif;
+    font-weight: 100;
+}
+p span:nth-child(3)
+{
+    color: var(--white);
+    font-size: 16px;
+    font-family: "Outfit", serif;
+    font-weight: 100;
+}
+
+.Equilibrium-id p:nth-child(1):hover
+{
+    color:var(--soft-blue_2);
+    cursor: pointer;
+}
+
+p span:nth-child(3):hover
+{
+  color: var(--soft-blue_2);
+  cursor: pointer;
+}
+
+.NFT-img:hover{
+    cursor: pointer;
+    opacity: 0.8; 
+    filter: hue-rotate(deg) saturate(2);
+}
+.NFT-img::after {
+    content: ""; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 50px; 
+    height: 50px;
+    color: var(--white);
+    background-image: url(/images/icon-view.svg);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    z-index: 1; 
+}
+.NFT-img:hover::after {
+    opacity: 1; 
+}
+
+@media (max-width: 768px) {
+
+    .Equilibrium-id p {
+        font-size: 18px;
+    }
+
+    .Equilibrium-id p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .icons {
+       display: flex;
+    }
+
+    .icons img {
+        margin-right: 10px;
+    }
+
+    .NFT-img img {
+        width: 302px;
+        height: 302px;
+    }
+}
+
+/*
+Responsive Desgin
+*/
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .main {
+        width: 350px;
+        height: 620px;
+    }
+
+    .Equilibrium-id p {
+        font-size: 16px;
+    }
+
+    .Equilibrium-id p:nth-child(2) {
+        font-size: 14px;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .NFT-img img {
+        width: 302px;
+        height: 302px;
+    }
+}
